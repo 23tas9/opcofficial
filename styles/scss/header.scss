@@ -94,9 +94,6 @@ header {
 
         z-index: 100;
 
-        border: 1px solid color.$global-nav_bottom-base;
-        border-radius: 32px;
-
         &__animation-bar {
             display: block;
             width: 48px;
@@ -108,7 +105,7 @@ header {
 
             background-color: color.$global-nav_bottom-base;
 
-            transition: transform 1s, opacity 1s;
+            transition: transform 0.5s, opacity 0.5s;
             transform-origin: center;
         }
     }
@@ -139,6 +136,7 @@ header {
                 transform: translateY(18px) rotate(225deg);
             }
             &:nth-child(2) {
+                transform: rotate(270deg);
                 opacity: 0.0;
             }
             &:nth-child(3) {

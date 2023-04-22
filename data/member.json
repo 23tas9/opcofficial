@@ -1,5 +1,5 @@
 {
-    "leader": [
+    "leaders": [
         {
             "name": "みなみん",
             "entered": 2021,
@@ -17,7 +17,7 @@
             ]
         }
     ],
-    "subleader": [
+    "subleaders": [
         {
             "name": "ケン",
             "entered": 2022,
@@ -36,7 +36,7 @@
             ]
         }
     ],
-    "accountant": [
+    "accountants": [
         {
             "name": "ぶっとん",
             "entered": 2021,
@@ -52,7 +52,7 @@
             ]
         }
     ],
-    "member": [
+    "members": [
         {
             "name": "たすくん",
             "entered": 2022,
@@ -66,6 +66,17 @@
                     "type": "twitter",
                     "name": "23_tas9"
                 }
+            ]
+        },
+        {
+            "name": "来羅",
+            "entered": 2021,
+            "faculty": "HB",
+            "belonging": [
+                "プログラミングサークル"
+            ],
+            "sns": [
+                
             ]
         }
     ]

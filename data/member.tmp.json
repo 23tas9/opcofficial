@@ -1,0 +1,14 @@
+{
+    "name": "名前",
+    "entered": 2023,
+    "faculty": "HW",
+    "belonging": [
+        "プログラミングサークル"
+    ],
+    "sns": [
+        {
+            "type": "twitter",
+            "name": "abcdefg"
+        }
+    ]
+}

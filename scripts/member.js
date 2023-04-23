@@ -60,7 +60,7 @@ const GetMemberList = async () =>{
 }
 
 const SetMemberListNode = async () =>{
-    const baseElem = document.querySelector('article#member-list');
+    const baseElem = document.querySelector('section#member-list');
     if(baseElem === null) return;
 
     const memberList = await GetMemberList();

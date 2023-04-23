@@ -6,8 +6,12 @@
 
 body {
   margin: 0;
-  background-color: #fff;
   box-sizing: border-box;
+  background-color: #fff;
+  background-image: url("../../images/background/bg_fullscreen.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
 }
 
 h1 {
@@ -43,14 +47,14 @@ main {
   height: calc(100vh - 64px);
 }
 
-.main-contents section {
+.main-contents > section {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-flow: column;
   min-height: 50vh;
 }
-.main-contents section:nth-child(2n+1) {
+.main-contents > section:nth-child(2n+1) {
   background-color: rgba(255, 255, 255, 0.7);
 }
 

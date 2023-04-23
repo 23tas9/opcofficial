@@ -1,108 +1,111 @@
-<html lang='ja'>
+<html lang="ja">
+
 <head>
-    <meta charset='UTF-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OECUプログラミングサークル</title>
 
-    <link rel='stylesheet' href='styles/css/main.css' />
+    <!-- サイト アイコン -->
+    <link rel="apple-touch-icon" type="image/png" href="images/favicon/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="images/favicon/icon-192x192.png">
+
+    <link rel="stylesheet" href="styles/css/main.css" />
     <link rel="stylesheet" href="styles/css/header.css" />
+    <link rel="stylesheet" href="styles/css/footer.css">
+
+
+    <script defer src="scripts/member.js"></script>
 </head>
+
 <body>
-    <div class='content'>
-        <header>
-            <h1 class="hero"><a href="index.html">OECUプログラミングサークル</a></h1>
-        </header>
-        <!-- レスポンシブ用 -->
-        <input type="checkbox" id="global-nav-toggle-checkbox" />
-        <label for="global-nav-toggle-checkbox" class="global-nav-toggle-label"><span class="global-nav-toggle-label__animation-bar"></span><span class="global-nav-toggle-label__animation-bar"></span><span class="global-nav-toggle-label__animation-bar"></span></label>
+    <header>
         <nav class="global-nav">
-            <ul>
-                <li><a href="index.html">トップ</a></li>
-                <li><a href="about.html">サークルについて</a></li>
-                <li><a href="activity.html" class="current">活動履歴</a></li>
-                <li><a href="members.html">部員紹介</a></li>
+            <a href="index.html" class="brand-logo"></a>
+
+            <input type="checkbox" id="toggle-global-nav" />
+            <label for="toggle-global-nav" class="global-nav__toggle-label">
+                <span class="global-nav__toggle-label__animation-bar"></span>
+                <span class="global-nav__toggle-label__animation-bar"></span>
+            </label>
+
+            <ul class="global-nav__menu">
+                <li><a href="#top">トップ</a></li>
+                <li><a href="#about-club">サークルについて</a></li>
+                <li><a href="#member-list">部員紹介</a></li>
+                <li><a href="activity.html">活動詳細</a></li>
             </ul>
         </nav>
-        <main class='main'>
-            <article>
+    </header>
+
+    <main>
+        <article class="main-contents">
+            <section>
                 <h2>活動履歴</h2>
-                <section>
-                    <h3>2022年</h3>
+                <article id="activity-history">
+                    <h3>7/8 ICPC 2022 Asia Yokohama Regional 国内予選　出場</h3>
                     <section>
+                        <p>
+                            国際大学対抗プログラミングコンテスト(ICPC)の予選に<br />
+                            チーム名"OPC"で出場しました！<br />
+                        </p>
                         <ul>
-                            <li>7/8 ICPC 2022 Asia Yokohama Regional 国内予選　出場</li>
-                            <ul>
-                                <li>概要</li>
-                                <ul>
-                                    <li>国際大学対抗プログラミングコンテスト(ICPC)の予選</li>
-                                </ul>
-                            </ul>
-                            <ul>
-                                <li>チーム名: OPC</li>
-                                <li>メンバ</li>
-                                <ul>
-                                    <li>やしゆ</li>
-                                    <li>みなみん</li>
-                                    <li>ぶっとん</li>
-                                </ul>
-                                <li>順位: 148位</li>
-                                <li><a href="https://icpc.iisf.or.jp/2022-yokohama/domestic-results/">リンク</a></li>
-                            </ul>
+                            <li>やしゆ</li>
+                            <li>みなみん</li>
+                            <li>ぶっとん</li>
                         </ul>
-                        <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">7/8の16:30~19:30にかけて行われたICPC予選に出場しました<br>結果は全国の大学から出場したチームのうち148位でした😳<br>(合計約280チーム？)<br><br>出場したチームメイトのお三方、お疲れ様でした～<a href="https://twitter.com/minamindayou?ref_src=twsrc%5Etfw">@minamindayou</a> ...代表<a href="https://twitter.com/yashioil?ref_src=twsrc%5Etfw">@yashioil</a> ...副代表<a href="https://twitter.com/Button501?ref_src=twsrc%5Etfw">@Button501</a> ...部員 <a href="https://t.co/3OpeJco5Ns">pic.twitter.com/3OpeJco5Ns</a></p>&mdash; OECUプログラミングサークル (@oecuprogramming) <a href="https://twitter.com/oecuprogramming/status/1546390087016992768?ref_src=twsrc%5Etfw">July 11, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        <p>
+                            順位は148位となりました。<br />
+
+                            (<a href="https://icpc.iisf.or.jp/2022-yokohama/domestic-results/">こちらはICPC 2022 国内予選
+                                結果表のリンクです。</a>)
+                        </p>
+                        <blockquote class="twitter-tweet">
+                            <p lang="ja" dir="ltr">
+                                7/8の16:30~19:30にかけて行われたICPC予選に出場しました<br>結果は全国の大学から出場したチームのうち148位でした😳<br>(合計約280チーム？)<br><br>出場したチームメイトのお三方、お疲れ様でした～<a
+                                    href="https://twitter.com/minamindayou?ref_src=twsrc%5Etfw">@minamindayou</a>
+                                ...代表<a href="https://twitter.com/yashioil?ref_src=twsrc%5Etfw">@yashioil</a> ...副代表<a
+                                    href="https://twitter.com/Button501?ref_src=twsrc%5Etfw">@Button501</a> ...部員 <a
+                                    href="https://t.co/3OpeJco5Ns">pic.twitter.com/3OpeJco5Ns</a></p>&mdash;
+                            OECUプログラミングサークル (@oecuprogramming) <a
+                                href="https://twitter.com/oecuprogramming/status/1546390087016992768?ref_src=twsrc%5Etfw">July
+                                11, 2022</a>
+                        </blockquote>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </section>
+
+                    <h3>9/9 Siv3D勉強会 in 大阪電気通信大学</h3>
                     <section>
-                        <ul>
-                            <li>9/9 Siv3D勉強会 in 大阪電気通信大学</li>
-                            <ul>
-                                <li>概要</li>
-                                <ul>
-                                    <li>Siv3Dの作者　鈴木 遼さんを招いた勉強会</li>
-                                </ul>
-                                <li>メンバ</li>
-                                <ul>
-                                    <li>ryo(鈴木 遼さん)・・・主催者</li>
-                                    <li>たすくん・・・主催者</li>
-                                    <li>やしゆ</li>
-                                    <li>みなみん</li>
-                                    <li>来羅</li>
-                                    <li>越智</li>
-                                    <li>kisuke</li>
-                                </ul>
-                            </ul>
-                        </ul>
-                        <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">本日の17時~19時にSiv3Dの勉強会を行いました<br>僅か2時間のみ勉強会でしたが、Siv3Dの便利さを体感できる貴重な時間だったと思います！<br>勉強会に参加した方々お疲れ様でした😊<br><br>~部長より~<br>このアイコンがサークルのロゴです🙇‍♂️ <a href="https://t.co/dXdfCjHbzK">https://t.co/dXdfCjHbzK</a></p>&mdash; OECUプログラミングサークル (@oecuprogramming) <a href="https://twitter.com/oecuprogramming/status/1568184142818607105?ref_src=twsrc%5Etfw">September 9, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        <p>
+                            Siv3Dの作者　鈴木 遼さんを招いた勉強会を<br />
+                            オンラインにて実施しました！<br />
+                        </p>
+                        ryo(鈴木 遼さん)・・・主催者
+                        たすくん・・・主催者
+                        やしゆ
+                        みなみん
+                        来羅
+                        越智
+                        kisuke
                     </section>
-                    <section>
-                        <ul>
-                            <li>9/12 本ページ制作</li>
-                            <ul>
-                                <li>制作メンバー</li>
-                                <ul>
-                                    <li>みなみん</li>
-                                    <li>たすくん</li>
-                                    <li>nokoken  他数名</li>
-                                </ul>
-                            </ul>
-                        </ul>
-                    </section>
-                    <section>
-                        <ul>
-                            <li>11/9 プログラム実装問題の作問</li>
-                            <ul>
-                                <li>メンバー</li>
-                                <ul>
-                                    <li>みなみん</li>
-                                    <li>やしゆ</li>
-                                </ul>
-                            </ul>
-                        </ul>
-                    </section>
-                </section>
-                
-            </article>
-        </main>
-    </div>
+                </article>
+            </section>
+            <section>
+                <h2>サークル公式Twitter</h2>
+                <a class="twitter-timeline" data-width="640" data-height="640"
+                    href="https://twitter.com/oecuprogramming?ref_src=twsrc%5Etfw">Tweets by oecuprogramming</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </section>
+        </article>
+    </main>
+    <footer>
+
+        <p class="copyright">
+            @2023 OECU Programing Club
+        </p>
+        <a href="https://twitter.com/oecuprogramming/" class="twitter-logo" target="_blank"
+            rel="noopener noreferrer"></a>
+    </footer>
 </body>
+
 </html>

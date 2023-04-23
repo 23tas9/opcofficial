@@ -1,0 +1,20 @@
+[
+    {
+        "title": "ICPC 2022 Asia Yokohama Regional 国内予選",
+        "date": "2022/07/08",
+        "introduce": "国際大学対抗プログラミングコンテスト(ICPC)の予選に\nチーム名\"OPC\"で出場しました！",
+        "main": "順位は惜しくも148位となりました。",
+        "members": [
+            "やしゆ",
+            "みなみん",
+            "ぶっとん"
+        ],
+        "quation": [
+            { 
+                "text": "ICPC 2022 国内予選結果",
+                "link": "https://icpc.iisf.or.jp/2022-yokohama/domestic-results/"
+            }
+        ],
+        "tweet-embed-link": "https://twitter.com/oecuprogramming/status/1546390087016992768?s=20"
+    }
+]

@@ -4,6 +4,17 @@ const CalclateGrade = entered =>{
     return 1 + date.getFullYear() - entered + (date.getMonth() < 4 ? 0:1);
 }
 
+const GetMemberList = async () =>{
+    const RequestURL = 'https://raw.githubusercontent.com/OECUPC/opcofficial/main/data/member.json';
+
+    const response = await fetch(RequestURL);
+    const json = response.json();
+
+    json.catch(error=>console.error(error));
+
+    return json;
+}
+
 // メンバー表のjsonからHTML要素を生成
 const GenerateMemberListHTML = json =>{
     const name = json['name'];
@@ -48,25 +59,14 @@ const GenerateMemberListHTML = json =>{
     return result;
 }
 
-const GetMemberList = async () =>{
-    const RequestURL = 'https://raw.githubusercontent.com/OECUPC/opcofficial/main/data/member.json';
-
-    const response = await fetch(RequestURL);
-    const json = response.json();
-
-    json.catch(error=>console.error(error));
-
-    return json;
-}
 
 const SetMemberListNode = async () =>{
-    const baseElem = document.querySelector('section#member-list');
-    if(baseElem === null) return;
+    const baseNode = document.querySelector('section#member-list');
 
     const memberList = await GetMemberList();
     
     // 代表
-    const leadersElem = baseElem.querySelector('section#leaders');
+    const leadersElem = baseNode.querySelector('section#leaders');
     leadersElem.insertAdjacentHTML('afterbegin', '<ul></ul>');
 
     for(const leader of memberList['leaders']){
@@ -79,7 +79,7 @@ const SetMemberListNode = async () =>{
     }
 
     // 副代表
-    const subleadersElem = baseElem.querySelector('section#subleaders');
+    const subleadersElem = baseNode.querySelector('section#subleaders');
     subleadersElem.insertAdjacentHTML('afterbegin', '<ul></ul>');
 
     for(const subleader of memberList['subleaders']){
@@ -92,7 +92,7 @@ const SetMemberListNode = async () =>{
     }
 
     // 会計
-    const accountantsElem = baseElem.querySelector('section#accountants');
+    const accountantsElem = baseNode.querySelector('section#accountants');
     accountantsElem.insertAdjacentHTML('afterbegin', '<ul></ul>');
 
     for(const accountant of memberList['accountants']){
@@ -105,7 +105,7 @@ const SetMemberListNode = async () =>{
     }
 
     // 普通の部員
-    const membersElem = baseElem.querySelector('section#members');
+    const membersElem = baseNode.querySelector('section#members');
     membersElem.insertAdjacentHTML('afterbegin', '<ul></ul>');
 
     for(const member of memberList['members']){

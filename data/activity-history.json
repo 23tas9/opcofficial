@@ -9,12 +9,12 @@
             "みなみん",
             "ぶっとん"
         ],
-        "quation": [
+        "quations": [
             { 
                 "text": "ICPC 2022 国内予選結果",
                 "link": "https://icpc.iisf.or.jp/2022-yokohama/domestic-results/"
             }
         ],
-        "tweet-embed-link": "https://twitter.com/oecuprogramming/status/1546390087016992768?s=20"
+        "tweet-embed-link": "https://twitter.com/oecuprogramming/status/1546390087016992768"
     }
 ]

@@ -56,7 +56,7 @@ const SetActivityListNode = async ()=>{
     const activityList = await GetActivityList();
 
     for(const activity of activityList){
-        baseNode.insertAdjacentElement('afterbegin', GenerateActivityListHTML(activity));
+        baseNode.insertAdjacentHTML('afterbegin', GenerateActivityListHTML(activity));
     }
 }
 

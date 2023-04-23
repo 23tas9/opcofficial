@@ -20,7 +20,9 @@ h1 {
 }
 
 h2 {
+  margin: 0 auto;
   font-size: 48px;
+  text-align: center;
 }
 
 h3 {
@@ -47,15 +49,16 @@ main {
   height: calc(100vh - 64px);
 }
 
+.main-contents {
+  padding: 64px 12px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
 .main-contents > section {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-flow: column;
   min-height: 50vh;
-}
-.main-contents > section:nth-child(2n+1) {
-  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .list-container ul {

@@ -44,11 +44,17 @@ header {
 }
 
 .brand-logo {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 48px;
   height: 48px;
+  padding-left: 64px;
   background-image: url(../../images/icons/official_white.png);
-  background-size: contain;
+  background-size: 48px;
+  background-repeat: no-repeat;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 640px) {

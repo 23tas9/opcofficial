@@ -23,7 +23,10 @@ h1 {
     white-space: nowrap;
 }
 h2 {
+    margin: 0 auto;
+
     font-size: 48px;
+    text-align: center;
 }
 h3 {
     padding-left: 12px;
@@ -57,6 +60,10 @@ main {
 }
 
 .main-contents {
+    
+    padding: 64px 12px;
+    background-color: rgba($color: white, $alpha: 0.7);
+
     & > section {
         display: flex;
         align-items: center;
@@ -65,13 +72,7 @@ main {
         flex-flow: column;
 
         min-height: 50vh;
-
-        
-        &:nth-child(2n+1) {
-            background-color: rgba($color: white, $alpha: 0.7);
-        }
     }
-
 }
 
 .list-container {

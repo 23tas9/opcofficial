@@ -17,7 +17,6 @@ const GenerateActivityListHTML = json => {
     const members = json['members'];
     const quations = json['quations'];
     const tweetEmbedLink = json['tweet-embed-link'];
-    console.log(json);
 
     let res = `
         <h3 class="activity-history__title">${title}</h3>\n
@@ -28,11 +27,13 @@ const GenerateActivityListHTML = json => {
         \t<h4>参加メンバー</h4>\n
     `;
 
-    res += '\t<ul class="activity-history__members">\n'
-    for (const member of members) {
-        res += `\t\t<li>${member}</li>\n`;
+    if (0 < members.length) {
+        res += '\t<ul class="activity-history__members">\n'
+        for (const member of members) {
+            res += `\t\t<li>${member}</li>\n`;
+        }
+        res += '\t</ul>\n';
     }
-    res += '\t</ul>\n';
 
     if (0 < quations.length) {
         res += '\t<ul class="activity-history__quations">\n'

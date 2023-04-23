@@ -29,16 +29,18 @@ const GenerateActivityListHTML = json => {
     `;
 
     res += '\t<ul class="activity-history__members">\n'
-    for(const member of members){
+    for (const member of members) {
         res += `\t\t<li>${member}</li>\n`;
     }
     res += '\t</ul>\n';
 
-    res += '\t<ul class="activity-history__quations">\n'
-    for(const quation of quations){
-        res += `\t\t<li><a href="${quation['link']}">${quation['text']}</a></li>\n`;
+    if (0 < quations.length) {
+        res += '\t<ul class="activity-history__quations">\n'
+        for (const quation of quations) {
+            res += `\t\t<li><a href="${quation['link']}">${quation['text']}</a></li>\n`;
+        }
+        res += '\t</ul>\n';
     }
-    res += '\t</ul>\n';
 
     res += `
         \t<blockquote class="twitter-tweet">
@@ -50,12 +52,12 @@ const GenerateActivityListHTML = json => {
     return res;
 }
 
-const SetActivityListNode = async ()=>{
+const SetActivityListNode = async () => {
     const baseNode = document.querySelector('article#activity-history');
 
     const activityList = await GetActivityList();
 
-    for(const activity of activityList){
+    for (const activity of activityList) {
         baseNode.insertAdjacentHTML('afterbegin', GenerateActivityListHTML(activity));
     }
 }

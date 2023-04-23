@@ -54,7 +54,7 @@ const GenerateActivityListHTML = json => {
 }
 
 const SetActivityListNode = async () => {
-    const baseNode = document.querySelector('article#activity-history');
+    const baseNode = document.querySelector('section#activity-history');
 
     const activityList = await GetActivityList();
 

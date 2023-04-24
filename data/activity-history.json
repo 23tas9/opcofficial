@@ -10,7 +10,7 @@
             "ぶっとん"
         ],
         "quations": [
-            { 
+            {
                 "text": "ICPC 2022 国内予選結果",
                 "link": "https://icpc.iisf.or.jp/2022-yokohama/domestic-results/"
             }
@@ -33,5 +33,17 @@
         ],
         "quations": [],
         "tweet-embed-link": "https://twitter.com/oecuprogramming/status/1568184142818607105"
+    },
+    {
+        "title": "本ページ制作",
+        "date": "2022/09/12",
+        "introduce": "本サークルの公式ホームページを制作しました！",
+        "main": "",
+        "members": [
+            "みなみん",
+            "たすくん",
+            "ケン",
+            "他数名..."
+        ]
     }
 ]

@@ -19,8 +19,8 @@ const GenerateActivityListHTML = json => {
     const tweetEmbedLink = json['tweet-embed-link'];
 
     let res = `
-        <h3 class="activity-history__title">${title}</h3>\n
         <section id=activity-${date}-js>\n
+        \t<h3 class="activity-history__title">${title}</h3>\n
         \t<p class="activity-history__date">実施日: ${date}</p>\n
         \t<p class="activity-history__introduce">${introduceText}</p>\n
         \t<p class="activity-history__main">${mainText}</p>\n
@@ -59,7 +59,7 @@ const GenerateContentsListHTML = json => {
     for(const data of json){
         console.log(data);
         const date = data["date"];
-        res += `<li><a href="#activity-${date}-js">${date} ${data["title"]}</a></li>\n`;
+        res += `<li><a class="scroll" href="#activity-${date}-js">${date} ${data["title"]}</a></li>\n`;
     }
 
     return res;
@@ -78,7 +78,7 @@ const SetActivityListNode = async () => {
         baseNode.insertAdjacentHTML('beforeend', GenerateActivityListHTML(activity));
     }
 
-    const contentsListNode = document.getElementById('activity-history-contents');
+    const contentsListNode = document.querySelector('#activity-history-contents ul');
     contentsListNode.insertAdjacentHTML('afterbegin', GenerateContentsListHTML(sortedActivityList));
 }
 

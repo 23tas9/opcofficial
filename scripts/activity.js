@@ -20,7 +20,7 @@ const GenerateActivityListHTML = json => {
 
     let res = `
         <h3 class="activity-history__title">${title}</h3>\n
-        <section>\n
+        <section id=activity-${date}-js>\n
         \t<p class="activity-history__date">実施日: ${date}</p>\n
         \t<p class="activity-history__introduce">${introduceText}</p>\n
         \t<p class="activity-history__main">${mainText}</p>\n
@@ -53,14 +53,33 @@ const GenerateActivityListHTML = json => {
     return res;
 }
 
+const GenerateContentsListHTML = json => {
+    let res = '';
+
+    for(const data of json){
+        console.log(data);
+        const date = data["date"];
+        res += `<li><a href="#activity-${date}-js">${date} ${data["title"]}</a></li>\n`;
+    }
+
+    return res;
+}
+
 const SetActivityListNode = async () => {
     const baseNode = document.querySelector('section#activity-history');
 
     const activityList = await GetActivityList();
+    const sortedActivityList = activityList.sort((a, b)=>{
+            return a.date > b.date ? -1:1;
+    });
 
-    for (const activity of activityList) {
-        baseNode.insertAdjacentHTML('afterbegin', GenerateActivityListHTML(activity));
+    for (const activity of sortedActivityList) {
+        console.log(activity);
+        baseNode.insertAdjacentHTML('beforeend', GenerateActivityListHTML(activity));
     }
+
+    const contentsListNode = document.getElementById('activity-history-contents');
+    contentsListNode.insertAdjacentHTML('afterbegin', GenerateContentsListHTML(sortedActivityList));
 }
 
 document.addEventListener('DOMContentLoaded', SetActivityListNode(), null);

@@ -18,7 +18,6 @@ body {
 
 h1 {
   font-size: 58px;
-  white-space: nowrap;
 }
 
 h2 {
@@ -34,7 +33,7 @@ h3 {
 }
 
 main {
-  width: 75vw;
+  width: 960px;
   min-height: 100vh;
   margin: 0 auto;
 }
@@ -63,7 +62,8 @@ main {
   display: flex;
   flex-flow: column;
   margin-top: 24px;
-  width: 50%;
+  padding: 0 32px;
+  width: 100%;
 }
 
 .list-container ul {
@@ -83,8 +83,11 @@ main {
   width: 320px;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 960px) {
   main {
     width: 100%;
+  }
+  .main-contents {
+    padding: 0 16px;
   }
 }

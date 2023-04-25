@@ -4,7 +4,12 @@
 * {
     color: color.$font-base;
     font-size: 16px;
+    
     box-sizing: border-box;
+
+    color: #585555;
+
+    font-family: 'Zen Maru Gothic', sans-serif;
 }
 
 body {
@@ -60,18 +65,22 @@ main {
 }
 
 .main-contents {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
     
     padding: 64px 12px;
     background-color: rgba($color: white, $alpha: 0.7);
 
     & > section {
         display: flex;
-        align-items: center;
-        justify-content: center;
 
         flex-flow: column;
 
-        min-height: 50vh;
+        margin-top: 24px;
+
+        width: 50%;
     }
 }
 

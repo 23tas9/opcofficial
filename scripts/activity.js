@@ -80,6 +80,12 @@ const SetActivityListNode = async () => {
 
     const contentsListNode = document.querySelector('#activity-history-contents ul');
     contentsListNode.insertAdjacentHTML('afterbegin', GenerateContentsListHTML(sortedActivityList));
+    
+    contentsListNode.querySelectorAll('.scroll').forEach(e=>{
+        e.addEventListener('click', ev=>{
+            pageScroll(ev);
+        }, null);
+    });
 }
 
 document.addEventListener('DOMContentLoaded', SetActivityListNode(), null);

@@ -1,5 +1,6 @@
-const pageScroll = element =>{
-    const targetId = element.href.slice(element.href.indexOf('#') + 1);
+const pageScroll = ev =>{
+    ev.preventDefault();
+    const targetId = ev.target.href.slice(ev.target.href.indexOf('#') + 1);
     const target = document.getElementById(targetId);
     
     const clientRect = target.getBoundingClientRect();
@@ -9,11 +10,10 @@ const pageScroll = element =>{
 }
 
 document.addEventListener('DOMContentLoaded', ()=>{
-    setTimeout(()=>{document.querySelectorAll('.scroll').forEach(e=>{
+    document.querySelectorAll('.scroll').forEach(e=>{
         console.log('scroll attach to ', e);
         e.addEventListener('click', ev=>{
-            ev.preventDefault();
-            pageScroll(ev.target)
-        });
-    })}, 100);
+            pageScroll(ev)
+        }, null);
+    });
 }, null);

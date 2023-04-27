@@ -11,7 +11,6 @@ const pageScroll = ev =>{
 
 document.addEventListener('DOMContentLoaded', ()=>{
     document.querySelectorAll('.scroll').forEach(e=>{
-        console.log('scroll attach to ', e);
         e.addEventListener('click', ev=>{
             pageScroll(ev)
         }, null);

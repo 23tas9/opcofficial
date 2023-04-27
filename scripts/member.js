@@ -5,7 +5,7 @@ const CalclateGrade = entered =>{
 }
 
 const GetMemberList = async () =>{
-    const RequestURL = 'https://raw.githubusercontent.com/OECUPC/opcofficial/main/data/member.json';
+    const RequestURL = './data/members.json';
 
     const response = await fetch(RequestURL);
     const json = response.json();
@@ -67,11 +67,11 @@ const SetMemberListNode = async () =>{
     
     // 代表
     const leadersElem = baseNode.querySelector('section#leaders');
-    leadersElem.insertAdjacentHTML('afterbegin', '<ul></ul>');
+    leadersElem.insertAdjacentHTML('beforeend', '<ul></ul>');
 
     for(const leader of memberList['leaders']){
         const leaderListElem = leadersElem.querySelector('ul');
-        leaderListElem.insertAdjacentHTML('afterbegin', `
+        leaderListElem.insertAdjacentHTML('beforeend', `
             <li>\n
             \t${GenerateMemberListHTML(leader)}\n
             </li>
@@ -80,11 +80,11 @@ const SetMemberListNode = async () =>{
 
     // 副代表
     const subleadersElem = baseNode.querySelector('section#subleaders');
-    subleadersElem.insertAdjacentHTML('afterbegin', '<ul></ul>');
+    subleadersElem.insertAdjacentHTML('beforeend', '<ul></ul>');
 
     for(const subleader of memberList['subleaders']){
         const subleaderListElem = subleadersElem.querySelector('ul');
-        subleaderListElem.insertAdjacentHTML('afterbegin', `
+        subleaderListElem.insertAdjacentHTML('beforeend', `
             <li>\n
             \t${GenerateMemberListHTML(subleader)}\n
             </li>
@@ -93,11 +93,11 @@ const SetMemberListNode = async () =>{
 
     // 会計
     const accountantsElem = baseNode.querySelector('section#accountants');
-    accountantsElem.insertAdjacentHTML('afterbegin', '<ul></ul>');
+    accountantsElem.insertAdjacentHTML('beforeend', '<ul></ul>');
 
     for(const accountant of memberList['accountants']){
         const accountantsListElem = accountantsElem.querySelector('ul');
-        accountantsListElem.insertAdjacentHTML('afterbegin', `
+        accountantsListElem.insertAdjacentHTML('beforeend', `
             <li>\n
             \t${GenerateMemberListHTML(accountant)}\n
             <li>
@@ -106,11 +106,11 @@ const SetMemberListNode = async () =>{
 
     // 普通の部員
     const membersElem = baseNode.querySelector('section#members');
-    membersElem.insertAdjacentHTML('afterbegin', '<ul></ul>');
+    membersElem.insertAdjacentHTML('beforeend', '<ul></ul>');
 
     for(const member of memberList['members']){
         const membersListElem = membersElem.querySelector('ul');
-        membersListElem.insertAdjacentHTML('afterbegin', `
+        membersListElem.insertAdjacentHTML('beforeend', `
             <li>\n
             \t${GenerateMemberListHTML(member)}\n
             </li>

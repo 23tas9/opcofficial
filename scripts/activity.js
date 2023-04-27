@@ -1,5 +1,5 @@
 const GetActivityList = async () => {
-    const RequestURL = 'https://raw.githubusercontent.com/OECUPC/opcofficial/new-test/data/activity-history.json';
+    const RequestURL = './data/activity-history.json';
 
     const response = await fetch(RequestURL);
     const json = response.json();
@@ -57,7 +57,6 @@ const GenerateContentsListHTML = json => {
     let res = '';
 
     for(const data of json){
-        console.log(data);
         const date = data["date"];
         res += `<li><a class="scroll" href="#activity-${date}-js">${date} ${data["title"]}</a></li>\n`;
     }
@@ -74,7 +73,6 @@ const SetActivityListNode = async () => {
     });
 
     for (const activity of sortedActivityList) {
-        console.log(activity);
         baseNode.insertAdjacentHTML('beforeend', GenerateActivityListHTML(activity));
     }
 

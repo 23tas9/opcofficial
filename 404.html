@@ -1,39 +1,73 @@
 ---
 permalink: /404.html
 ---
-<html lang='ja'>
+<!DOCTYPE html>
+<html lang="ja">
+
 <head>
-    <meta charset='UTF-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- メタ -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="OECU, OECUプログラミングサークル, OECUPU, 大阪電気通信大学プログラミングサークル" />
+
+    <!-- リダイレクト -->
+    <meta http-equiv="refresh" content="10; url=index.html">
+
     <title>OECUプログラミングサークル</title>
 
-    <link rel='stylesheet' href='styles/css/main.css' />
+    <!-- サイト アイコン -->
+    <link rel="apple-touch-icon" type="image/png" href="images/favicon/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="images/favicon/icon-192x192.png">
+
+    <!-- フォント読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500&display=swap" rel="stylesheet">
+
+    <!-- スタイル適用 -->
+    <link rel="stylesheet" href="styles/css/main.css" />
     <link rel="stylesheet" href="styles/css/header.css" />
+    <link rel="stylesheet" href="styles/css/footer.css">
+
+    <!-- スクリプト -->
+    <script defer src="scripts/404.js"></script>
 </head>
+
 <body>
-    <div class='content'>
-        <header>
-            <h1 class="hero"><a href="index.html">OECUプログラミングサークル</a></h1>
-        </header>
-        <!-- レスポンシブ用 -->
-        <input type="checkbox" id="global-nav-toggle-checkbox" />
-        <label for="global-nav-toggle-checkbox" class="global-nav-toggle-label"><span class="global-nav-toggle-label__animation-bar"></span><span class="global-nav-toggle-label__animation-bar"></span><span class="global-nav-toggle-label__animation-bar"></span></label>
+    <header>
         <nav class="global-nav">
-            <ul>
-                <li><a href="index.html">トップ</a></li>
-                <li><a href="about.html">サークルについて</a></li>
-                <li><a href="activity.html">活動履歴</a></li>
-                <li><a href="members.html">部員紹介</a></li>
+            <a href="index.html" class="brand-logo"></a>
+
+            <input type="checkbox" id="toggle-global-nav" />
+            <label for="toggle-global-nav" class="global-nav__toggle-label">
+                <span class="global-nav__toggle-label__animation-bar"></span>
+                <span class="global-nav__toggle-label__animation-bar"></span>
+            </label>
+
+            <ul class="global-nav__menu">
+                <li><a href="index.html">ホーム</a></li>
             </ul>
         </nav>
-        <main class='main'>
-            <article>
-                <h2>404 not found.</h2>
-                <p>ページが見つかりませんでした。</p>
-                <a href='index.html'>トップページに戻る</a>
-            </article>
-        </main>
-    </div>
+    </header>
+
+    <main>
+        <article class="main-contents" id="about-club">
+            <section>
+                <h2>404 NOT FOUND</h2>
+                お探しのサイトは見つかりませんでした。<br />
+                <span id="redirect-countdown"></span>秒後にトップページに戻ります。
+            </section>
+        </article>
+    </main>
+    <footer>
+
+        <p class="copyright">
+            @2023 OECU Programing Club
+        </p>
+        <a href="https://twitter.com/oecuprogramming/" class="twitter-logo" target="_blank"
+            rel="noopener noreferrer"></a>
+    </footer>
 </body>
+
 </html>

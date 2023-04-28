@@ -24,9 +24,9 @@ const GenerateMemberListHTML = json =>{
     const sns = json['sns'];
     
     let result = `
-        <p>名前　　: ${name}</p>\n
-        <p>学年　　: ${grade}</p>\n
-        <p>学部学科: ${faculty}</p>\n
+        <p>ニックネーム: ${name}</p>\n
+        <p>学年　　　　: ${(grade <= 4 ? grade:`院${grade - 4}`)}回生</p>\n
+        <p>学部学科　　: ${faculty}</p>\n
     `;
 
     if(0 < belonging.length){

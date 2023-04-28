@@ -78,6 +78,20 @@
             "sns": [
                 
             ]
+        },
+        {
+            "name": "数数無",
+            "entered": 2019,
+            "faculty": "HB→院MQ",
+            "belonging": [
+                "プログラミングサークル"
+            ],
+            "sns": [
+                {
+                    "type": "twitter",
+                    "name": "singleinnov_5S"
+                }
+            ]
         }
     ]
 }

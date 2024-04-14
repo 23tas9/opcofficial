@@ -17,7 +17,72 @@ export default function Home() {
           <p>などの初心者や</p>
         </div>
       )
+    },
+    {
+      "title": "活動内容",
+      "image": "https://placehold.jp/640x480.png",
+      "imageAlt": "ダミー",
+      "content": (
+        <div>
+          <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+          </ul>
+        </div>
+      )
+    },
+    {
+      "title": "活動場所",
+      "image": "https://placehold.jp/640x480.png",
+      "imageAlt": "ダミー",
+      "content": (
+        <div>
+          <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+          </ul>
+        </div>
+      )
+    },
+    {
+      "title": "活動人数",
+      "image": "https://placehold.jp/640x480.png",
+      "imageAlt": "ダミー",
+      "content": (
+        <div>
+          <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+          </ul>
+        </div>
+      )
+    },
+    {
+      "title": "相談・入部等",
+      "image": "https://placehold.jp/640x480.png",
+      "imageAlt": "ダミー",
+      "content": (
+        <div>
+          <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+          </ul>
+        </div>
+      )
     }
+
   ]
 
   return (
@@ -30,16 +95,17 @@ export default function Home() {
 
       {/* Content wrapper */}
       <article>
-          {Contents.map(content=>(
+        {Contents.map(content=>(
+          <section>
             <section>
               <h2>{content.title}</h2>
               {content.content}
-
-              <figure>
-                <img src={content.image} alt={content.imageAlt} />
-              </figure>
             </section>
-          ))}
+             <figure>
+              <img src={content.image} alt={content.imageAlt} />
+            </figure>
+          </section>
+        ))}
       </article>
     </main>
   );

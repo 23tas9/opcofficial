@@ -1,49 +1,57 @@
-export function Header(){
+export function Header() {
   const Nav = [
     {
       "text": "Home",
-      "href": "/"
+      "href": "/",
     },
     {
       "text": "About",
-      "href": "/about"
+      "href": "/about",
     },
     {
       "text": "Activities",
-      "href": "/activities"
+      "href": "/activities",
     },
     {
       "text": "Blogs",
-      "href": "/blogs"
+      "href": "/blogs",
     },
     {
       "text": "Works",
-      "href": "/works"
+      "href": "/works",
     },
     {
       "text": "SNS",
-      "href": "/sns"
+      "href": "/sns",
     },
     {
       "text": "Contact",
-      "href": "/contact"
-    }
+      "href": "/contact",
+    },
   ];
 
   return (
-    <header>
-      {/* logo */}
-      <div>
-
+    <header className="header">
+      <div className="header-wrapper">
+        {/* logo */}
+        <a className="logo" href="/">
+          <img
+            className="official-icon__small"
+            src="./images/icons/official_white.png"
+          />
+          <p>OECUPC</p>
+        </a>
+        {/* Global nav */}
+        <nav className="global-nav">
+          <ul className="global-nav__list">
+            {Nav.map((elem) => (
+              <li className="global-nav__item">
+                <a href={elem.href}>{elem.text}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
-      {/* Global nav */}
-      <nav class="global-nav">
-        <ul>
-          {Nav.map(elem=>(
-            <li><a href={elem.href}></a>{elem.text}</li>
-          ))}
-        </ul>
-      </nav>
     </header>
-  )
+  );
 }

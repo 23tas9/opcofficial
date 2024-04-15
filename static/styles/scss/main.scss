@@ -1,3 +1,4 @@
+@use 'sass:math';
 @use 'var';
 
 @import 'https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500&display=swap';
@@ -33,7 +34,7 @@ body {
     align-items: center;
 
     width: var.$breakpoint--pc-min;
-    height: 24em;
+    height: 32em;
 
     margin: 0 auto;
 
@@ -66,7 +67,7 @@ body {
     width: var.$breakpoint--pc-min;
 
     &__content {
-        width: var.$breakpoint--pc-min / 2;
+        width: math.div(var.$breakpoint--pc-min, 2);
 
         padding: 1em;
     }
@@ -74,7 +75,7 @@ body {
     &__image {
         display: flex;
 
-        width: var.$breakpoint--pc-min / 2;
+        width: math.div(var.$breakpoint--pc-min, 2);
 
         margin: 0;
 

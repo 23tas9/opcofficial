@@ -159,7 +159,7 @@ export default function Home() {
       {/* hero */}
       <div className="hero">
         <h1 className="hero__title">OECUPC</h1>
-        <p className="hero__caption">OECU Programming Circle</p>
+        <p className="hero__description">OECU Programming Circle</p>
       </div>
 
       {/* Content wrapper */}

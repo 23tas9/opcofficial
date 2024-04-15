@@ -1,6 +1,6 @@
 # OECUPC公式サイト
 
-阪電気通信大学 プログラミングサークル(通称OPC)の公式サイトです
+大阪電気通信大学 プログラミングサークル(通称OPC)の公式サイトです
 
 [公式サイトリンク](https://oecupc.github.io/opcofficial/index.html)
 

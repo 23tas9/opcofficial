@@ -49,6 +49,14 @@ body {
     align-items: center;
 }
 
+.sub-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: var.$breakpoint--pc-min;
+}
+
 .media-content {
     display: flex;
     flex-direction: row;

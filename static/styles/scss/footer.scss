@@ -1,10 +1,22 @@
+@use 'var';
+
 $footer-height: 64px;
 
 footer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
     width: 100%;
     height: $footer-height;
+
+    &::before {
+        content: "";
+
+        display: block;
+
+        width: 80%;
+        border-top: 1px solid var.$color--main;
+    }
 }

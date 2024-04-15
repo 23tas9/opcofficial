@@ -1,14 +1,16 @@
 import { type PageProps } from "$fresh/server.ts";
 
+import { Head } from "$fresh/runtime.ts";
+
 import { Header } from "../components/Header.tsx";
 import { Footer } from "../components/Footer.tsx"
 
 export default function App({ Component }: PageProps) {
   return (
     <html>
-      <head>
+      <Head>
         {/* メタ */}
-        <meta charset="utf-8" />
+        <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 
@@ -30,14 +32,14 @@ export default function App({ Component }: PageProps) {
 
         {/* フォント読み込み */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500&display=swap" rel="stylesheet" />
 
         {/* スタイル適用 */}
         <link rel="stylesheet" href="./styles/css/main.css" />
         <link rel="stylesheet" href="./styles/css/header.css" />
         <link rel="stylesheet" href="./styles/css/footer.css" />
-      </head>
+      </Head>
       <body>
         <Header />
         <Component />

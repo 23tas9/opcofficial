@@ -6,7 +6,6 @@ export default function Home() {
       "imageAlt": "ダミー",
       "content": (  
         <div>
-          <h2>目的</h2>
           <p>
             主に、プログラミングをゆるく楽しむサークルです！
           </p>
@@ -82,30 +81,115 @@ export default function Home() {
         </div>
       )
     }
+  ];
 
+  const SubContents = [
+    {
+      "title": "サークルについて",
+      "list": [
+        {
+          "title": "1",
+          "href": "/"
+        },
+        {
+          "title": "2",
+          "href": "/"
+        },
+        {
+          "title": "3",
+          "href": "/"
+        },
+      ]
+    },
+    {
+      "title": "お知らせ・ブログ",
+      "list": [
+        {
+          "title": "1",
+          "href": "/"
+        },
+        {
+          "title": "2",
+          "href": "/"
+        },
+        {
+          "title": "3",
+          "href": "/"
+        },
+      ]
+    },
+    {
+      "title": "作品",
+      "list": [
+        {
+          "title": "1",
+          "href": "/"
+        },
+        {
+          "title": "2",
+          "href": "/"
+        },
+        {
+          "title": "3",
+          "href": "/"
+        },
+      ]
+    },
+    {
+      "title": "相談・入部等",
+      "list": [
+        {
+          "title": "1",
+          "href": "/"
+        },
+        {
+          "title": "2",
+          "href": "/"
+        },
+        {
+          "title": "3",
+          "href": "/"
+        },
+      ]
+    }
   ]
 
   return (
     <main>
       {/* hero */}
-      <div>
-        <h1>OECUPC</h1>
-        <p>OECU Programming Circle</p>
+      <div className="hero">
+        <h1 className="hero__title">OECUPC</h1>
+        <p className="hero__description">OECU Programming Circle</p>
       </div>
 
       {/* Content wrapper */}
-      <article>
-        {Contents.map(content=>(
-          <section>
+      <article className="center-align">
+        <section>
+          {Contents.map(content=>(
+            <section className="media-content">
+              <section className="media-content__content">
+                <h2>{content.title}</h2>
+                {content.content}
+              </section>
+               <figure className="media-content__image">
+                <img src={content.image} alt={content.imageAlt} />
+              </figure>
+            </section>
+          ))}
+        </section>
+
+        <section className="sub-content">
+          {SubContents.map(content=>(
             <section>
               <h2>{content.title}</h2>
-              {content.content}
+              <ul>
+                {content.list.map(element=>(
+                  <li><a href={element.href}>{element.title}</a></li>
+                ))}
+              </ul>
             </section>
-             <figure>
-              <img src={content.image} alt={content.imageAlt} />
-            </figure>
-          </section>
-        ))}
+          ))}
+        </section>
       </article>
     </main>
   );

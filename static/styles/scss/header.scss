@@ -1,0 +1,72 @@
+@use 'var';
+
+$header-height: 64px;
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 1em;
+    
+    text-decoration: none;
+}
+
+.header {
+    width: 100%;
+    height: $header-height;
+
+    background-color: var.$color--base;
+
+    &-wrapper {
+        display: flex;
+        flex-direction: row;
+    
+        justify-content: space-between;
+        align-items: center;
+
+        width: var.$breakpoint--pc-min;
+
+        margin: 0 auto;
+    }
+}
+
+.global-nav {
+    &__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+        padding: 0;
+        margin: 0;
+
+        list-style: none;
+    }
+
+    &__item {
+        height:  $header-height;
+
+        line-height:  $header-height;
+        text-align: center;
+
+        & a {
+            display: block;
+
+            width: 100%;
+            min-width: 5em;
+            height: 100%;
+
+            padding: 0 1em;
+
+            text-decoration: none;
+
+            transition: background-color 0.5s;
+
+            &:hover{
+                background-color: var.$color--accent;
+            }
+        }
+    }
+}

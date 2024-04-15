@@ -30,7 +30,6 @@
   },
   "compilerOptions": {
     "jsx": "react-jsx",
-    "jsxImportSource": "preact",
-    "noImplicitAny": false
+    "jsxImportSource": "https://esm.sh/preact@10.19.6"
   }
 }

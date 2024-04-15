@@ -1,0 +1,90 @@
+@use 'sass:math';
+@use 'var';
+
+@import 'https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500&display=swap';
+
+* {
+    box-sizing: border-box;
+
+    color: var.$color--main;
+
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+.official-icon {
+    
+    &__small {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: var.$breakpoint--pc-min;
+    height: 32em;
+
+    margin: 0 auto;
+
+    &__title {
+        font-size: 48px;
+    }
+}
+
+.center-align {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: var.$breakpoint--pc-min;
+}
+
+.media-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: var.$breakpoint--pc-min;
+
+    &__content {
+        width: math.div(var.$breakpoint--pc-min, 2);
+
+        padding: 1em;
+    }
+
+    &__image {
+        display: flex;
+
+        width: math.div(var.$breakpoint--pc-min, 2);
+
+        margin: 0;
+
+        & img {
+            width: 100%;
+        }
+    }
+
+    &:nth-child(odd) {
+        flex-direction: row-reverse;
+    }
+}

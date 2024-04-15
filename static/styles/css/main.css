@@ -1,0 +1,69 @@
+@import 'https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500&display=swap';
+* {
+  box-sizing: border-box;
+  color: #505050;
+  font-family: "Zen Maru Gothic", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+.official-icon__small {
+  width: 64px;
+  height: 64px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 960px;
+  height: 32em;
+  margin: 0 auto;
+}
+.hero__title {
+  font-size: 48px;
+}
+
+.center-align {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 960px;
+}
+
+.media-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 960px;
+}
+.media-content__content {
+  width: 480px;
+  padding: 1em;
+}
+.media-content__image {
+  display: flex;
+  width: 480px;
+  margin: 0;
+}
+.media-content__image img {
+  width: 100%;
+}
+.media-content:nth-child(odd) {
+  flex-direction: row-reverse;
+}

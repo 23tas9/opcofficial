@@ -6,7 +6,6 @@ export default function Home() {
       "imageAlt": "ダミー",
       "content": (  
         <div>
-          <h2>目的</h2>
           <p>
             主に、プログラミングをゆるく楽しむサークルです！
           </p>
@@ -88,20 +87,20 @@ export default function Home() {
   return (
     <main>
       {/* hero */}
-      <div>
-        <h1>OECUPC</h1>
-        <p>OECU Programming Circle</p>
+      <div className="hero">
+        <h1 className="hero__title">OECUPC</h1>
+        <p className="hero__caption">OECU Programming Circle</p>
       </div>
 
       {/* Content wrapper */}
-      <article>
+      <article className="center-align">
         {Contents.map(content=>(
-          <section>
-            <section>
+          <section className="media-content">
+            <section className="media-content__content">
               <h2>{content.title}</h2>
               {content.content}
             </section>
-             <figure>
+             <figure className="media-content__image">
               <img src={content.image} alt={content.imageAlt} />
             </figure>
           </section>

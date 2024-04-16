@@ -38,7 +38,7 @@ export default function Home({ data }: PageProps<Data>) {
 				<article className="article-card grid-container">
 					{feed.entries.map(entry => (
 						<section className="article-card__item">
-							<a href={entry.links[0].href}>
+							<a href={`/blogs/${entry.id.split('/')[3]}`}>
 								{entry.attachments?.map(attachment => (
 									<figure className="article-card__attachment">
 										{
@@ -46,7 +46,7 @@ export default function Home({ data }: PageProps<Data>) {
 												<img className="article-card__attachment__image" src={attachment.url} alt="" /> : <></>
 										}
 										<figcaption className="article-card__description">
-											<h2 className="article-card__item__title">{entry.title?.value}</h2>
+											<h3 className="article-card__item__title">{entry.title?.value}</h3>
 											<p>{entry.updated?.toString()}</p>
 											<p>{entry.author?.name}</p>
 										</figcaption>

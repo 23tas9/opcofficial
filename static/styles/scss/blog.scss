@@ -1,11 +1,11 @@
 @use 'sass:math';
 @use 'var';
 
-$article-card-width: var.$breakpoint--pc-min - 32px;
+$article-card-width: var.$breakpoint--pc-min;
 
 .article-card {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2em 1.5em;
 
     margin: 0 auto;
@@ -15,6 +15,12 @@ $article-card-width: var.$breakpoint--pc-min - 32px;
 
     &__item {
         box-shadow: 0.5rem 0.5rem 1rem 0px rgba(0, 0, 0, 0.4);
+        
+        transition: transform 0.25s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
 
         & a {
             text-decoration: none;

@@ -1,13 +1,17 @@
 .article-card {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2em 1.5em;
   margin: 0 auto;
   padding: 16px;
-  width: 928px;
+  width: 960px;
 }
 .article-card__item {
   box-shadow: 0.5rem 0.5rem 1rem 0px rgba(0, 0, 0, 0.4);
+  transition: transform 0.25s;
+}
+.article-card__item:hover {
+  transform: scale(1.05);
 }
 .article-card__item a {
   text-decoration: none;

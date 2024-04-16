@@ -37,7 +37,7 @@ export function Header() {
         <a className="logo" href="/">
           <img
             className="official-icon__small"
-            src="./images/icons/official_white.png"
+            src="/images/icons/official_white.png"
           />
           <p>OECUPC</p>
         </a>

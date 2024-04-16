@@ -1,0 +1,35 @@
+@use 'sass:math';
+@use 'var';
+
+$article-card-width: var.$breakpoint--pc-min - 32px;
+
+.article-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em 1.5em;
+
+    margin: 0 auto;
+    padding: 16px;
+
+    width: $article-card-width;
+
+    &__item {
+        box-shadow: 0.5rem 0.5rem 1rem 0px rgba(0, 0, 0, 0.4);
+
+        & a {
+            text-decoration: none;
+        }
+    }
+
+    &__description {
+        margin: 1rem;
+    }
+
+    &__attachment {
+        margin: 0;
+
+        &__image {
+            width: 100%;
+        }
+    }
+}

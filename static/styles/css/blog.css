@@ -1,0 +1,23 @@
+.article-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em 1.5em;
+  margin: 0 auto;
+  padding: 16px;
+  width: 928px;
+}
+.article-card__item {
+  box-shadow: 0.5rem 0.5rem 1rem 0px rgba(0, 0, 0, 0.4);
+}
+.article-card__item a {
+  text-decoration: none;
+}
+.article-card__description {
+  margin: 1rem;
+}
+.article-card__attachment {
+  margin: 0;
+}
+.article-card__attachment__image {
+  width: 100%;
+}

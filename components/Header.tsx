@@ -5,24 +5,16 @@ export function Header() {
       "href": "/",
     },
     {
-      "text": "About",
-      "href": "/about",
-    },
-    {
       "text": "Activities",
       "href": "/activities",
-    },
-    {
-      "text": "Blogs",
-      "href": "/blogs",
     },
     {
       "text": "Works",
       "href": "/works",
     },
     {
-      "text": "SNS",
-      "href": "/sns",
+      "text": "Blogs",
+      "href": "/blogs",
     },
     {
       "text": "Contact",

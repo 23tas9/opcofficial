@@ -27,32 +27,19 @@
 ## 解説　（見出し）
 コードの説明等を記入。
 `(バッククォート)３つで囲むことでコードを挿入できます。
-コピペにするために「」をつけています。本書きでは外してください。
 
-「```言語名:ファイル名.拡張子
-コードを記入
-```」
-
-「```Python:python.py
+```py
 # Pythonの例
 a = input()
 print(a)
-```」
+```
 コードの説明
 
-「```Java:Main.java
-//Javaの例
-import java.util.Scanner;
-
-public class Main {
-  public static void main(String[] args) {
-    Scanner input = new Scanner(System.in);
-    String s = input.next();
-      System.out.println(s);
-    input.close();
-    }
-}
-```」
+```js
+// js
+const response = await fetch(URL);
+const json = await response.json();
+```
 コードの説明
 
 リンクの挿入の仕方

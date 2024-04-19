@@ -8,7 +8,7 @@ interface Data {
 
 export const handler: Handlers<Data> = {
 	async GET(_req, ctx) {
-		const url = "https://nishikiout.net/feed";
+		const url = "https://raw.githubusercontent.com/tas9n/opcofficial/fresh_dev/static/blog.rss";
 		const response = await fetch(url);
 		const xml = await response.text();
 		const feed = await parseFeed(xml);
@@ -38,7 +38,7 @@ export default function Home({ data }: PageProps<Data>) {
 				<article className="article-card grid-container">
 					{feed.entries.map(entry => (
 						<section className="article-card__item">
-							<a href={`/blogs/${entry.id.split('/')[3]}`}>
+							<a href={`/blogs/${entry.id.replace('oecu-pc://', '')}`}>
 								{entry.attachments?.map(attachment => (
 									<figure className="article-card__attachment">
 										{

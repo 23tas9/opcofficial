@@ -75,22 +75,6 @@
                     "name": "MM_oecu"
                 }
             ]
-        },
-        {
-            "name": "ケン",
-            "entered": 2022,
-            "faculty": "HW",
-            "belonging": [
-                "プログラミングサークル",
-                "東方電通録",
-                "電子計算組織研究会(EDPS)"
-            ],
-            "sns": [
-                {
-                    "type": "twitter",
-                    "name": "33363376_KR"
-                }
-            ]
         }
     ]
 }

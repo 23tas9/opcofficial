@@ -5,8 +5,56 @@ interface Activist {
   members: number;
 };
 
+interface Member{
+  name: string,
+  entered: number,
+  faculty: string,
+  clubs: string[],
+  sns: {type: string, id: string}[]
+}
+
+// 現在年度から学年を計算
+const CalclateGrade = (entered: number) =>{
+  const date = new Date();
+  
+  // 4月(month: 3)を超えているなら学年を足す
+  return date.getFullYear() - entered +
+      (date.getMonth() < 3 ? 0:1);
+}
+
+const MemberNode = (member: Member) =>{
+  return (
+    <section class="members-container">
+      <h4>{member.name}</h4>
+      <section>
+        <p>ニックネーム: {member.name}</p>
+        <p>学部学科　　: {member.faculty}</p>
+        <p>学年　　　　: {CalclateGrade(member.entered)}回生</p>
+        <p>所属クラブ</p>
+        <ul>
+          {member.clubs.map(club=>(
+            <li>{club}</li>
+          ))}
+        </ul>
+        {(0 < member.sns.length) ?
+          <p>SNS</p>:
+        <></>}
+        <ul>
+          {member.sns.map(elem=>{
+            if(elem.type === "twitter" || elem.type === "x"){
+              return <li><ExternalLink href={`https://x.com/${elem.id}`} name={elem.id} /></li>
+            }
+          })}
+        </ul>
+      </section>
+    </section>
+  )
+}
+
 export default function Home() {
   const activists = JSON.parse(Deno.readTextFileSync("./static/data/activists.json"));
+
+  const members = JSON.parse(Deno.readTextFileSync("./static/data/members.json"));
   
   const Contents = [
     {
@@ -110,20 +158,33 @@ export default function Home() {
       </div>
 
       {/* Content wrapper */}
-      <article className="center-align">
-        <section>
+      <article>
+        <article>
           {Contents.map(content=>(
-            <section className="media-content">
-              <section className="media-content__content">
+            <section className="media-container">
+              <section className="media-container__content">
                 <h2>{content.title}</h2>
                 {content.content}
               </section>
-               <figure className="media-content__image">
+               <figure className="media-container__image">
                 <img src={content.image} alt={content.imageAlt} />
               </figure>
             </section>
           ))}
-        </section>
+        </article>
+        <article>
+          <h2>部員紹介</h2>
+          <section>
+            <h3>代表</h3>
+            {members.leaders.map((leader: Member)=>MemberNode(leader))}
+            <h3>副代表</h3>
+            <section>{members.subleaders.map((subleader: Member)=>MemberNode(subleader))}</section>
+            <h3>会計</h3>
+            <section>{members.accountants.map((accountant: Member)=>MemberNode(accountant))}</section>
+            <h3>主な部員</h3>
+            <section>{members.members.map((member: Member)=>MemberNode(member))}</section>
+          </section>
+        </article>
       </article>
     </main>
   );

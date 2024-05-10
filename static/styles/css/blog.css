@@ -1,7 +1,4 @@
 .article-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2em 1.5em;
   margin: 0 auto;
   padding: 16px;
   width: 960px;
@@ -38,9 +35,6 @@
 }
 
 @media screen and (max-width: 960px) {
-  .article-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
   .article-cards__item {
     height: 270px;
   }

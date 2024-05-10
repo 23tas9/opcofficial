@@ -62,6 +62,12 @@ p {
   align-items: center;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em 1.5em;
+}
+
 .media-content {
   display: flex;
   flex-direction: row;
@@ -134,6 +140,9 @@ p {
   }
   .hero {
     height: 420px;
+  }
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
   }
   .media-content {
     flex-direction: column-reverse;

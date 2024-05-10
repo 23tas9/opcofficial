@@ -4,10 +4,6 @@
 $article-cards-width: var.$breakpoint--pc-min;
 
 .article-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2em 1.5em;
-
     margin: 0 auto;
     padding: 16px;
 
@@ -60,7 +56,6 @@ $article-cards-width: var.$breakpoint--pc-min;
 @media screen and (max-width: var.$breakpoint--pc-min) {
 
     .article-cards {
-        grid-template-columns: repeat(2, 1fr);
 
         &__item {
             height: 270px;

@@ -31,6 +31,16 @@ p {
     margin: 0;
 }
 
+.external-link {
+    display: inline-flex;
+    align-items: center;
+
+    & svg {
+        width: 24px;
+        height: 24px;
+    }
+}
+
 .official-icon {
 
     &__small {

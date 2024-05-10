@@ -23,6 +23,15 @@ p {
   margin: 0;
 }
 
+.external-link {
+  display: inline-flex;
+  align-items: center;
+}
+.external-link svg {
+  width: 24px;
+  height: 24px;
+}
+
 .official-icon__small {
   width: 64px;
   height: 64px;

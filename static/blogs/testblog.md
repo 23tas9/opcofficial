@@ -1,5 +1,8 @@
 ---
 title: タイトル
+date: 2020-04-02 00:00:00 +0900
+categories: [programming, csharp]
+tags: [framework, dotnet]
 ---
 ## はじめに（見出し）
 文章を記入～

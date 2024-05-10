@@ -62,13 +62,6 @@ p {
   align-items: center;
 }
 
-.sub-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 960px;
-}
-
 .media-content {
   display: flex;
   flex-direction: row;
@@ -147,11 +140,5 @@ p {
   }
   .media-content:nth-child(odd) {
     flex-direction: column-reverse;
-  }
-  .sub-content {
-    flex-direction: column;
-  }
-  .sub-content section {
-    padding: 1em;
   }
 }

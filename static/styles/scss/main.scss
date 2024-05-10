@@ -77,14 +77,6 @@ p {
     align-items: center;
 }
 
-.sub-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    width: var.$breakpoint--pc-min;
-}
-
 .media-content {
     display: flex;
     flex-direction: row;
@@ -191,14 +183,6 @@ p {
         flex-direction: column-reverse;
         &:nth-child(odd) {
             flex-direction: column-reverse;
-        }
-    }
-
-    .sub-content {
-        flex-direction: column;
-
-        & section {
-            padding: 1em;
         }
     }
 }

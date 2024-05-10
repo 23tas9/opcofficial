@@ -93,7 +93,7 @@ export default function Home() {
       "content": (
         <div>
           <p>
-            <ExternalLink href="https://x.com/messages/compose?recipient_id=1527489590067490817" name="公式X(旧Twitter)のDM"/>、<br />
+            <ExternalLink href="https://x.com/oecuprogramming" name="公式X(旧Twitter)"/>のDM、<br />
             または代表や部員などのX(旧Twitter)のDMまでご連絡ください！
           </p>
         </div>

@@ -26,7 +26,7 @@
             <guid isPermalink="false">oecu-pc://testblog</guid>
             <category>カテゴリ1</category>
             <category>カテゴリ2</category>
-            <enclosure url="https://oecupc.github.io/images/xxxxxxx.png" type="image/png"
+            <enclosure url="https://placehold.jp/640x480.png" type="image/png"
                 length="0" />
         </item>
 
@@ -45,7 +45,7 @@
             <guid isPermalink="false">oecu-pc://xxxxxxxxxxx</guid>
             <category>カテゴリ1</category>
             <category>カテゴリ2</category>
-            <enclosure url="https://oecupc.github.io/images/xxxxxxx.png" type="image/png" length="0" />
+            <enclosure url="https://placehold.jp/640x480.png" type="image/png" length="0" />
         </item>
     </channel>
 </rss>

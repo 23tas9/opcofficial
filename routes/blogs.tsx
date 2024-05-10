@@ -8,13 +8,6 @@ interface Data {
 
 export const handler: Handlers<Data> = {
 	async GET(_req, ctx) {
-		/*
-		const url = "https://raw.githubusercontent.com/tas9n/opcofficial/fresh_dev/static/blog.rss";
-		const response = await fetch(url);
-
-		const xml = await response.text();
-		*/
-
 
 		const xml = await Deno.readTextFile("./static/blog.rss");
 		const feed = await parseFeed(xml);
@@ -24,6 +17,8 @@ export const handler: Handlers<Data> = {
 };
 
 export default function Home({ data }: PageProps<Data>) {
+	const PlaceHolderImageURL = "images/no_image.jpg";
+
 	const feed: Feed = data.feed;
 
 	const ImageTypes = [
@@ -45,19 +40,29 @@ export default function Home({ data }: PageProps<Data>) {
 					{feed.entries.map(entry => (
 						<section className="article-card__item">
 							<a href={`/blogs/${entry.id.replace('oecu-pc://', '')}`}>
-								{entry.attachments?.map(attachment => (
-									<figure className="article-card__attachment">
-										{
-											(ImageTypes.includes(attachment.mimeType || "")) ?
-												<img className="article-card__attachment__image" src={attachment.url} alt="" /> : <></>
-										}
-										<figcaption className="article-card__description">
-											<h3 className="article-card__item__title">{entry.title?.value}</h3>
-											<p>{entry.updated?.toString()}</p>
-											<p>{entry.author?.name}</p>
-										</figcaption>
-									</figure>
-								))}
+								<figure className="article-card__attachment">
+									{
+										(0 < (entry.attachments?.at(0)?.url?.length || 0)) ?
+											(ImageTypes.includes(entry.attachments?.at(0)?.mimeType || "")) ?
+												<img className="article-card__attachment__image" src={entry.attachments?.at(0)?.url} alt="" /> :
+												<></>:
+											<img className="article-card__attachment__image" src={PlaceHolderImageURL} alt="" />
+									}
+									<figcaption className="article-card__description">
+										<h3 className="article-card__item__title">{entry.title?.value}</h3>
+										<p>{
+											entry.updated?.toLocaleString("ja-jp", {
+												year: "numeric",
+												month: "2-digit",
+												day: "2-digit"
+											}).replaceAll('/', '-')
+										}</p>
+										<p>
+											{(0 < (entry.author?.name?.length || 0)) ? "執筆者:": ""}
+											{entry.author?.name}
+										</p>
+									</figcaption>
+								</figure>								
 							</a>
 						</section>
 					))}

@@ -8,9 +8,15 @@ interface Data {
 
 export const handler: Handlers<Data> = {
 	async GET(_req, ctx) {
+		/*
 		const url = "https://raw.githubusercontent.com/tas9n/opcofficial/fresh_dev/static/blog.rss";
 		const response = await fetch(url);
+
 		const xml = await response.text();
+		*/
+
+
+		const xml = await Deno.readTextFile("./static/blog.rss");
 		const feed = await parseFeed(xml);
 
 		return ctx.render({ feed });

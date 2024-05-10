@@ -34,7 +34,8 @@ export default function Home({ data }: PageProps<Data>) {
 				<link rel="stylesheet" href="/styles/css/blog.css" />
 			</Head>
 			<main>
-				<h1 className="center-align">{feed.title.value}</h1>
+				<h1 className="center-align">ブログ</h1>
+				{/*<h1 className="center-align">{feed.title.value}</h1>*/}
 
 				<article className="article-cards grid-container">
 					{feed.entries.map(entry => (

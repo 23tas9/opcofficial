@@ -13,6 +13,9 @@
         <!-- エントリの要素はすべてitemの子要素となります -->
         <item>
             <title>記事のタイトル</title>
+            <author>
+                tester
+            </author>
             <link>https://github.io/blogs/testblog</link>
             <description>
                 本文
@@ -45,7 +48,7 @@
             <guid isPermalink="false">oecu-pc://xxxxxxxxxxx</guid>
             <category>カテゴリ1</category>
             <category>カテゴリ2</category>
-            <enclosure url="https://placehold.jp/640x480.png" type="image/png" length="0" />
+            <!--<enclosure url="" type="image/png" length="0" />-->
         </item>
     </channel>
 </rss>

@@ -44,11 +44,14 @@
   .article-cards__item {
     height: 270px;
   }
+  .article-cards__item__title {
+    margin: 0;
+    font-size: 16px;
+    white-space: nowrap;
+  }
   .article-cards__item__description {
     height: 120px;
-  }
-  .article-cards__item__description h3 {
-    margin: 0;
+    padding: 4px;
   }
   .article-cards__item__attachment__image {
     height: 150px;

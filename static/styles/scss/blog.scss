@@ -65,12 +65,15 @@ $article-cards-width: var.$breakpoint--pc-min;
         &__item {
             height: 270px;
 
+            &__title {
+                margin: 0;
+                font-size: 16px;
+                white-space: nowrap;
+            }
+
             &__description {
                 height: 120px;
-
-                & h3 {
-                    margin: 0;
-                }
+                padding: 4px;
             }
 
             &__attachment {

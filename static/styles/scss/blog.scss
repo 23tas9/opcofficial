@@ -50,3 +50,27 @@ $article-card-width: var.$breakpoint--pc-min;
         }
     }
 }
+
+@media screen and (max-width: var.$breakpoint--pc-min){
+    
+    .article-card {
+        grid-template-columns: repeat(2, 1fr);
+
+        &__item{
+            height: 270px;
+        }
+
+        &__description {
+            height: 120px;
+            & h3{
+                margin: 0;
+            }
+        }
+
+        &__attachment {
+            &__image {
+                height: 150px;
+            }
+        }
+    }
+}

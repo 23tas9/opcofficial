@@ -16,6 +16,16 @@ html {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-height: 100vh;
+
+    margin: 0;
+}
+
+p {
     margin: 0;
 }
 
@@ -38,11 +48,12 @@ body {
     align-items: center;
 
     width: var.$breakpoint--pc-min;
-    height: 32em;
+    min-height: 512px;
 
     margin: 0 auto;
 
     &__title {
+        text-align: center;
         font-size: 48px;
     }
 }
@@ -148,5 +159,34 @@ body {
 
     &:has(:checked)>&__title h2::after {
         content: "[閉じる]";
+    }
+}
+
+@media screen and (max-width: var.$breakpoint--pc-min){
+    * {
+        max-width: 100%;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .hero {
+        height: 420px;
+    }
+    
+    .media-content {
+        flex-direction: column-reverse;
+        &:nth-child(odd) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    .sub-content {
+        flex-direction: column;
+
+        & section {
+            padding: 1em;
+        }
     }
 }

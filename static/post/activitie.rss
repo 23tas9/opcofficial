@@ -4,7 +4,7 @@
         <title>OECUプログラミングサークル 活動詳細ブログ</title>
         <link>https://opcofficial.deno.dev/activitie/</link>
         <description>これは活動詳細ブログ</description>
-        <lastBuildDate>Sat, 11 May 2024 17:53:35 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 11 May 2024 18:10:17 GMT</lastBuildDate>
         <docs>http://rsss.law.harvard.edu/tech/rss</docs>
         <language>ja-jp</language>
         <generator>OPCMS</generator>
@@ -20,6 +20,21 @@
             <guid isPermalink="false">oecupc-activitie://ICPC2022Asia</guid>
             <category>競技プログラミング</category><category>ICPC</category>
             <enclosure url="https://raw.githubusercontent.com/OECUPC/opcofficial/fresh_dev/static/post/activitie/ICPC2022Asia/thumbnail.png" length="572687" type="image/png" />
+        </item>
+
+        <item>
+            <title>プログラム実装問題の作問</title>
+            
+            <description>
+**実施日**: 2022年11月9日
+
+## 活動内容
+プログラミングスキルの向上を目指し、
+            </description>
+            <pubDate>Wed, 26 Apr 2023 00:00:00 GMT</pubDate>
+            <guid isPermalink="false">oecupc-activitie://ProgrammingQuestion_1</guid>
+            <category>競技プログラミング</category><category>C++</category><category>勉強会</category>
+            <enclosure url="https://raw.githubusercontent.com/OECUPC/opcofficial/fresh_dev/static/post/activitie/ProgrammingQuestion_1/thumbnail.png" length="250116" type="image/png" />
         </item>
 
         <item>

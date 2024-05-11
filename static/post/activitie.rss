@@ -4,7 +4,7 @@
         <title>OECUプログラミングサークル 活動詳細ブログ</title>
         <link>https://opcofficial.deno.dev/activitie/</link>
         <description>これは活動詳細ブログ</description>
-        <lastBuildDate>Sat, 11 May 2024 18:17:11 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 11 May 2024 18:26:16 GMT</lastBuildDate>
         <docs>http://rsss.law.harvard.edu/tech/rss</docs>
         <language>ja-jp</language>
         <generator>OPCMS</generator>
@@ -61,6 +61,19 @@
             <guid isPermalink="false">oecupc-activitie://Siv3DStudy2022</guid>
             <category>Siv3D</category><category>C++</category><category>勉強会</category>
             <enclosure url="https://raw.githubusercontent.com/OECUPC/opcofficial/fresh_dev/static/post/activitie/Siv3DStudy2022/thumbnail.png" length="23783" type="image/png" />
+        </item>
+
+        <item>
+            <title>Siv3D勉強会 2023</title>
+            
+            <description>
+## 概要
+- **イベント名**: Siv3D 勉強会 in 大阪電気通信大学 (2023, オ
+            </description>
+            <pubDate>Sat, 11 May 2024 18:26:16 GMT</pubDate>
+            <guid isPermalink="false">oecupc-activitie://Siv3DStudy2023</guid>
+            <category>Siv3D</category><category>C++</category><category>勉強会</category>
+            <enclosure url="https://raw.githubusercontent.com/OECUPC/opcofficial/fresh_dev/static/post/activitie/Siv3DStudy2023/thumbnail.png" length="23783" type="image/png" />
         </item>
     </channel>
 </rss>

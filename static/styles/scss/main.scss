@@ -27,8 +27,10 @@ body {
     background-color: white;
 }
 
-p {
+p, h1, h2, h3, h4 {
     margin: 0;
+    
+    white-space: break-spaces;
 }
 
 main {
@@ -225,6 +227,7 @@ main {
 
     .grid-container{
         grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.5em 1em;
     }
     
     .media-container {

@@ -27,6 +27,11 @@ $article-cards-width: var.$breakpoint--pc-min;
             text-decoration: none;
         }
 
+        &__title {
+            padding-left: 8px;
+            border-left: 8px solid var.$color--main;
+        }
+
         &__description {
             padding: 1rem;
             height: 180px;

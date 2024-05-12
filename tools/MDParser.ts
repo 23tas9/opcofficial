@@ -2,6 +2,7 @@ export interface Meta{
     title: string,
     author: string,
     categories: string[],
+    description: string,
     [key: string]: string | string[]
 }
 
@@ -17,7 +18,8 @@ export function MDParser(text: string){
     const meta: Meta = {
         title: "",
         categories: [],
-        author: ""
+        author: "",
+        description: ""
     };
 
     metaText?.split('\n').forEach(line =>{

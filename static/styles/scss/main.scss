@@ -133,6 +133,10 @@ main {
     padding: 16px;
 }
 
+.markdown-body {
+    padding: 16px;
+}
+
 .toc-container {
     width: math.div(var.$breakpoint--pc-min, 1.5);
 

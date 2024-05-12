@@ -107,6 +107,10 @@ main {
   padding: 16px;
 }
 
+.markdown-body {
+  padding: 16px;
+}
+
 .toc-container {
   width: 640px;
   margin: 0 auto;

@@ -9,7 +9,10 @@ import "https://esm.sh/prismjs@1.29.0/components/prism-python?no-check";
 
 import { Meta } from "./MDParser.ts";
 
-export default function RenderBlog(body: string, meta: Meta){
+import { GetBlogTypeNameFromType } from "./GetBlogTypeNameFromType.ts";
+import { BlogType } from "./utils.ts";
+
+export default function RenderBlog(body: string, meta: Meta, type: BlogType){
     return (
         <>
             <Head>
@@ -24,6 +27,8 @@ export default function RenderBlog(body: string, meta: Meta){
                     dangerouslySetInnerHTML={{__html: body}}>
 
                 </article>
+
+                <a href={`/${type}`}>{`${GetBlogTypeNameFromType(type)}一覧に戻る`}</a>
             </main>
         </>
     )

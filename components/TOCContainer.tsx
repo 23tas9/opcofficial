@@ -1,9 +1,7 @@
-import { PageProps } from "$fresh/server.ts";
-
 // 目次
 interface Data {
     title: string,
-    entries: Array<{ title: string, href: string }>;
+    entries: string[];
 }
 
 export function TOCContainer(data: Data) {
@@ -13,7 +11,7 @@ export function TOCContainer(data: Data) {
 
             <ul className="toc-container__list">
                 {data.entries.map(entry => (
-                    <li><a href={entry.href}>{entry.title}</a></li>
+                    <li><a href={`#${entry}`}>{entry}</a></li>
                 ))}
             </ul>
         </div>

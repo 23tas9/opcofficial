@@ -36,8 +36,15 @@ export function MDParser(text: string){
         }
     });
 
+    const topics = bodyText.split('\n').filter(line=>{
+        return line.startsWith("## ");
+    }).map(line=>line.substring(3).trim());
+
+    console.log(topics);
+
     return {
         meta: meta,
-        body: bodyText
+        body: bodyText,
+        topics: topics
     }
 }

@@ -103,6 +103,10 @@ main {
   border: 1px dashed #ffcc5f;
 }
 
+.member-introduce {
+  padding: 16px;
+}
+
 .toc-container {
   width: 640px;
   margin: 0 auto;

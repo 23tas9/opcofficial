@@ -172,7 +172,7 @@ export default function Home() {
             </section>
           ))}
         </article>
-        <article>
+        <article className="member-introduce">
           <h2>部員紹介</h2>
           <section>
             <h3>代表</h3>

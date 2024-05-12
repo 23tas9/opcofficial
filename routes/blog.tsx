@@ -2,6 +2,7 @@ import { Handlers, PageProps } from "$fresh/server.ts";
 import { parseFeed, Feed } from "rss/mod.ts";
 
 import ArticleCards from "../components/ArticleCards.tsx";
+import { BlogType } from "../tools/utils.ts";
 
 interface Data {
 	feed: Feed
@@ -22,5 +23,5 @@ export default function Home({ data }: PageProps<Data>) {
 
 	console.log(feed);
 
-	return <ArticleCards feed={feed} />
+	return <ArticleCards title="ブログ" type={BlogType.blog} feed={feed} />
 }

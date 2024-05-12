@@ -113,7 +113,7 @@ main {
         & img {
             display: block;
             width: $media-content-width;
-            height: calc($media-content-width * 0.6);
+            height: calc($media-content-width * 0.75);
         }
     }
 
@@ -124,7 +124,7 @@ main {
 
 .members-container {
     margin: 8px;
-    padding-left: 32px;
+    padding: 32px;
 
     border: 1px dashed var.$color--accent;
 }
@@ -235,9 +235,17 @@ main {
     }
     
     .media-container {
-        flex-direction: column-reverse;
+        flex-direction: column;
+
         &:nth-child(odd) {
-            flex-direction: column-reverse;
+            flex-direction: column;
+        }
+
+        &__image {
+            & img {
+                width: 100vw;
+                height: calc(100vw * 0.75);
+            }
         }
     }
 }

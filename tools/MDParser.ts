@@ -1,3 +1,8 @@
+const TopicPrefix = "# ";
+
+const matchReg = new RegExp("(?<=---)[\\s\\S]*?(?=---)");
+const replaceReg = new RegExp("---[\\s\\S]*?---");
+
 export interface Meta{
     title: string,
     author: string,
@@ -7,8 +12,6 @@ export interface Meta{
 }
 
 export function MDParser(text: string){
-    const matchReg = new RegExp("(?<=---)[\\s\\S]*?(?=---)");
-    const replaceReg = new RegExp("---[\\s\\S]*?---");
 
     // ---で囲まれている箇所の摘出と改行の削除
     const metaText = text.match(matchReg)?.at(0)?.trim();
@@ -37,7 +40,7 @@ export function MDParser(text: string){
     });
 
     const topics = bodyText.split('\n').filter(line=>{
-        return line.startsWith("## ");
+        return line.startsWith(TopicPrefix);
     }).map(line=>line.substring(3).trim());
 
     console.log(topics);

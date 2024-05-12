@@ -41,7 +41,7 @@ export function MDParser(text: string){
 
     const topics = bodyText.split('\n').filter(line=>{
         return line.startsWith(TopicPrefix);
-    }).map(line=>line.substring(3).trim());
+    }).map(line=>line.substring(TopicPrefix.length).trim());
 
     console.log(topics);
 

@@ -89,7 +89,9 @@ main {
   margin: 0;
 }
 .media-container__image img {
-  width: 100%;
+  display: block;
+  width: 480px;
+  height: 288px;
 }
 .media-container:nth-child(odd) {
   flex-direction: row-reverse;

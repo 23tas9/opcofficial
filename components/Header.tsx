@@ -1,20 +1,24 @@
 export function Header() {
   const Nav = [
     {
-      "text": "Home",
-      "href": "/",
+      text: "Home",
+      href: "/",
     },
     {
-      "text": "Activity",
-      "href": "/activity",
+      text: "About",
+      href: "/about"
     },
     {
-      "text": "Blog",
-      "href": "/blog",
+      text: "Activity",
+      href: "/activity",
     },
     {
-      "text": "Contact",
-      "href": "/contact",
+      text: "Blog",
+      href: "/blog",
+    },
+    {
+      text: "Contact",
+      href: "/contact",
     },
   ];
 

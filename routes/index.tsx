@@ -17,7 +17,7 @@ interface Data{
 export const handler: Handlers<Data> = {
 	async GET(req, ctx) {
 
-        const kv = await Deno.openKv(`https://api.deno.com/databases/${Deno.env.get("DENO_KV_TARGET_UUID")}/connect`);
+        const kv = await Deno.openKv(`https://api.deno.com/databases/${Deno.env.get("KV_TARGET_UUID")}/connect`);
 
         const data = await kv.get<ScheduledEventData[]>(["scheduledEvent"]);
 

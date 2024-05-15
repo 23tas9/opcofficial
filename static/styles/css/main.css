@@ -19,7 +19,10 @@ body {
   background-color: white;
 }
 
-p, h2, h3, h4 {
+p,
+h2,
+h3,
+h4 {
   margin: 0;
   white-space: break-spaces;
 }
@@ -71,6 +74,23 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2em 1.5em;
+}
+
+.scheduled-event {
+  height: 320px;
+  overflow: scroll;
+}
+.scheduled-event__content {
+  margin-bottom: 16px;
+  padding: 16px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+.scheduled-event__content--active {
+  background-color: #e0ffe0;
+  border-color: #00c800;
+  box-shadow: 0 0 10px rgba(0, 200, 0, 0.5);
 }
 
 .media-container {

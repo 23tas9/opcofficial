@@ -11,7 +11,7 @@ interface ScheduledEventData {
 };
 
 interface Data{
-    scheduledEvent: ScheduledEventData[] | undefined
+    scheduledEvent: ScheduledEventData[]
 };
 
 export const handler: Handlers<Data> = {
@@ -35,7 +35,7 @@ export const handler: Handlers<Data> = {
         // console.log(data);
 
         if(!data.value){
-            return ctx.render({ scheduledEvent: undefined });
+            return ctx.render({ scheduledEvent: [] });
         }
         
         return ctx.render({ scheduledEvent: data.value });

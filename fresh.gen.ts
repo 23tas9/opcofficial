@@ -8,8 +8,9 @@ import * as $about from "./routes/about.tsx";
 import * as $activity from "./routes/activity.tsx";
 import * as $activity_name_ from "./routes/activity/[name].tsx";
 import * as $api_login from "./routes/api/login.ts";
-//import * as $api_test from "./routes/api/test.tsx";
-//import * as $api_testpost from "./routes/api/testpost.tsx";
+import * as $api_postCurrentActivity from "./routes/api/postCurrentActivity.tsx";
+//import * as $api_postEnd from "./routes/api/postEnd.tsx";
+//import * as $api_postNew from "./routes/api/postNew.tsx";
 import * as $blog from "./routes/blog.tsx";
 import * as $blog_name_ from "./routes/blog/[name].tsx";
 import * as $index from "./routes/index.tsx";
@@ -26,8 +27,9 @@ const manifest = {
     "./routes/activity.tsx": $activity,
     "./routes/activity/[name].tsx": $activity_name_,
     "./routes/api/login.ts": $api_login,
-    //"./routes/api/test.tsx": $api_test,
-    //"./routes/api/testpost.tsx": $api_testpost,
+    "./routes/api/postCurrentActivity.tsx": $api_postCurrentActivity,
+    //"./routes/api/postEnd.tsx": $api_postEnd,
+    //"./routes/api/postNew.tsx": $api_postNew,
     "./routes/blog.tsx": $blog,
     "./routes/blog/[name].tsx": $blog_name_,
     "./routes/index.tsx": $index,

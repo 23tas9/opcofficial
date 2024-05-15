@@ -44,10 +44,6 @@ export const handler: Handlers<Data> = {
 
 export default function Home({ data }: PageProps<Data>){
 
-    console.log(data.scheduledEvent.sort((a, b)=>{
-        return a.status - b.status;
-    }));
-
     return (
         <main>
             <div>
@@ -59,9 +55,9 @@ export default function Home({ data }: PageProps<Data>){
                         <section className="scheduled-event__content center-align">
                             <h3>現在予定されているイベントはありません。</h3>
                         </section>
-                        :data.scheduledEvent.sort((a, b)=>{
+                        :data.scheduledEvent?.sort((a, b)=>{
                             return b.status - a.status;
-                        }).map(event=>(
+                        })?.map(event=>(
                         <section className={
                             "scheduled-event__content" + 
                             (event.status === 2 ? " scheduled-event__content--active":"")

@@ -1,17 +1,8 @@
 import { Handlers, PageProps } from "$fresh/server.ts";
-
-interface ScheduledEventData {
-    id: string,
-    type: string,
-    location: string,
-    name: string,
-    start: Date,
-    end: Date | undefined,
-    status: number
-};
+import { ScheduledEventData } from "../tools/utils.ts";
 
 interface Data{
-    scheduledEvent: ScheduledEventData[]
+    scheduledEvent: ScheduledEventData[];
 };
 
 export const handler: Handlers<Data> = {
@@ -19,7 +10,7 @@ export const handler: Handlers<Data> = {
         // KV_DATABASE_URLが設定されているとき(deploy上)ではopenKv();
         const databaseUrl = Deno.env.get("KV_DATABASE_URL");
 
-        const getKv = async ()=> {
+        const getKv = ()=> {
             if(databaseUrl) {
                 return Deno.openKv(databaseUrl);
             }

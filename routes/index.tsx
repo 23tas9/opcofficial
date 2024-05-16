@@ -7,19 +7,8 @@ interface Data{
 
 export const handler: Handlers<Data> = {
 	async GET(req, ctx) {
-        // KV_DATABASE_URLが設定されているとき(deploy上)ではopenKv();
         const databaseUrl = Deno.env.get("KV_DATABASE_URL");
-
-        const getKv = ()=> {
-            if(databaseUrl) {
-                return Deno.openKv(databaseUrl);
-            }
-            else{
-                return Deno.openKv();
-            }
-        };
-
-        const kv = await getKv();
+        const kv = await (databaseUrl ? Deno.openKv(databaseUrl):Deno.openKv());
 
         const data = await kv.get<ScheduledEventData[]>(["scheduledEvent"]);
 

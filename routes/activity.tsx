@@ -23,5 +23,7 @@ export default function Home({ data }: PageProps<Data>) {
 
 	console.log(feed);
 
-	return <ArticleCards title="活動詳細" type={BlogType.activity} feed={feed} />;
+	return (
+		<ArticleCards title="活動詳細" type={BlogType.activity} feed={feed} />
+	);
 }

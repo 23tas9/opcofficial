@@ -4,6 +4,8 @@ import { ScheduledEventData } from "../../tools/utils.ts";
 export const handler: Handlers = {
     async POST(req, _ctx) {
         try{
+            console.log(req);
+
             const json: ScheduledEventData = await req.json();
 
             // KV_DATABASE_URLが設定されていないとき(deploy上)ではopenKv();
@@ -16,7 +18,7 @@ export const handler: Handlers = {
                 data.value.map(event=>(event.id === json.id) ? json:event):
                 [data, json];
 
-                console.log(setValue);
+            console.log(setValue);
             
             //await kv.set(["scheduledEvent"], setValue);
             

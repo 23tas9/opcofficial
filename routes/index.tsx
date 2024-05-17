@@ -32,8 +32,8 @@ export default function Home({ data }: PageProps<Data>){
                     <h2>予定されているイベント</h2>
                     <article className="scheduled-event">
                     {data.scheduledEvent.length <= 0 ?
-                        <section className="scheduled-event__content center-align">
-                            <h3>現在予定されているイベントはありません。</h3>
+                        <section className="scheduled-event__content--none">
+                            <p>現在予定されているイベントはありません。</p>
                         </section>
                         :data.scheduledEvent?.sort((a, b)=>{
                             return b.status - a.status;
@@ -58,18 +58,6 @@ export default function Home({ data }: PageProps<Data>){
                     <p>
                         ここにお知らせが表示
                     </p>
-                </div>
-                <div>
-                    <h2>サークルについて</h2>
-                    <p>主に、プログラミングをゆるく楽しむサークルです！</p>
-                    <ul>
-                        <li>プログラミングはわからないけど、興味がある</li>
-                        <li>programmingの授業でわからないところがある</li>
-                        <li>自分で何か作品を作りたい！</li>
-                        <li>競技プログラミングに挑戦してみたい！</li>
-                    </ul>
-                    <p>など、初心者から上級者のかたまで、大大大歓迎です！</p>
-                    <p>詳しくは<a href="/about">About</a>へ！</p>
                 </div>
             </div>
         </main>

@@ -27,13 +27,18 @@ body {
     background-color: white;
 }
 
-p,
-h2,
-h3,
-h4 {
-    margin: 0;
-
+p, h2, h3 {
     white-space: break-spaces;
+}
+
+h2 {
+    padding: 12px 16px;
+    border-bottom: 4px solid var.$color--accent;
+}
+
+h3 {
+    padding: 8px 16px;
+    border-left: 8px solid var.$color--main;
 }
 
 main {
@@ -111,6 +116,17 @@ main {
             border-color: #00c800; // アクティブ時のボーダー色
             box-shadow: 0 0 10px rgba(0, 200, 0, 0.5); // アクティブ時のシャドウ効果
         }
+
+        &--none {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
+            height: 100%;
+
+            background-color: lightgray;
+        }
     }
 }
 
@@ -149,9 +165,6 @@ main {
 
 .members-container {
     margin: 8px;
-    padding: 32px;
-
-    border: 1px dashed var.$color--accent;
 }
 
 .member-introduce {
@@ -279,8 +292,12 @@ main {
         &__image {
             & img {
                 width: 100vw;
-                height: calc(100vw * 0.75);
+                height: calc(100% * 0.75);
             }
         }
+    }
+
+    .toc-container {
+        width: math.div(var.$breakpoint--pc-min, 3);
     }
 }

@@ -4,8 +4,6 @@ import { ScheduledEventData } from "../../tools/utils.ts";
 export const handler: Handlers = {
     async POST(req, _ctx) {
         try{
-            console.log(req);
-
             if(req.headers.get("X-API-Key") !== Deno.env.get("POST_API_KEY")){
                 throw Error(`Not allowed api key: ${req.headers.get("X-API-Key")}`);
             }
@@ -24,7 +22,7 @@ export const handler: Handlers = {
 
             console.log(setValue);
             
-            //await kv.set(["scheduledEvent"], setValue);
+            await kv.set(["scheduledEvent"], setValue);
             
             return new Response(null, { status: 200 });
         }catch(err){

@@ -14,12 +14,6 @@ export const handler: Handlers = {
             const databaseUrl = Deno.env.get("KV_DATABASE_URL");
             const kv = await (databaseUrl ? Deno.openKv(databaseUrl):Deno.openKv());
 
-            for await(const entry of kv.list({ prefix: [] })){
-                console.log(`delete: ${entry.key}`);
-                kv.delete(entry.key);
-            }
-            return new Response(null, { status: 200 });
-
             const data = await kv.get<ScheduledEventData[]>(["scheduledEvent"]);
 
             const setValue = data.value?.some(event=> event.id === json.id) ?

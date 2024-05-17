@@ -22,7 +22,7 @@ export const handler: Handlers = {
                 (data.value?.some(event=> event.id === json.id)) ? data.value.map(event=>(event.id === json.id) ? json:event):
                 [...data.value, json];
 
-            console.log(setValue);
+            console.log(`updated: ${setValue}`);
             
             await kv.set(["scheduledEvent"], setValue);
             

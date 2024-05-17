@@ -44,9 +44,10 @@ export default function Home({ data }: PageProps<Data>){
                         }>
                             <h3>{event.name}</h3>
                             <p>場所: {event.location}</p>
-                            <p>開始予定時刻: {event.start.toLocaleString("ja-JP")}</p>
-                            <p>終了予定時刻: {event.end === undefined ?
-                                "未定":event.end.toLocaleString("ja-JP")
+                            <p>開始予定時刻: {new Date(event.start).toLocaleString("ja-JP")}</p>
+                            <p>終了予定時刻: {
+                                event.end === undefined ? "未定":
+                                new Date(event.end).toLocaleString("ja-JP")
                             }</p>
                         </section>
                     ))}

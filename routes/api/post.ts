@@ -6,6 +6,10 @@ export const handler: Handlers = {
         try{
             console.log(req);
 
+            if(req.headers.get("X-API-Key") !== Deno.env.get("POST_API_KEY")){
+                throw Error(`Not allowed api key: ${req.headers.get("X-API-Key")}`);
+            }
+
             const json: ScheduledEventData = await req.json();
 
             // KV_DATABASE_URLが設定されていないとき(deploy上)ではopenKv();

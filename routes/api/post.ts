@@ -16,9 +16,13 @@ export const handler: Handlers = {
 
             const data = await kv.get<ScheduledEventData[]>(["scheduledEvent"]);
 
-            const setValue = data.value?.some(event=> event.id === json.id) ?
-                data.value.map(event=>(event.id === json.id) ? json:event):
-                [data.value, json];
+            console.log(data);
+            throw Error("testing now");
+            
+            const setValue = 
+                (json.status === 3) ? data.value?.filter(event => event.id !== json.id):
+                (data.value?.some(event=> event.id === json.id)) ? data.value.map(event=>(event.id === json.id) ? json:event):
+                [...data.value, json];
 
             console.log(setValue);
             

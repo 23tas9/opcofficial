@@ -142,7 +142,7 @@ export default function Home() {
         <div>
           <p>
             <ExternalLink href="https://x.com/oecuprogramming" name="公式X(旧Twitter)"/>のDM、<br />
-            または代表や部員などのX(旧Twitter)のDMまでご連絡ください！
+            または代表や幹部のX(旧Twitter)のDMなどまでご連絡ください！
           </p>
         </div>
       )

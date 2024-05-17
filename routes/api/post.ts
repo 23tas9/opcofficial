@@ -18,7 +18,7 @@ export const handler: Handlers = {
 
             const setValue = data.value?.some(event=> event.id === json.id) ?
                 data.value.map(event=>(event.id === json.id) ? json:event):
-                [data, json];
+                [data.value, json];
 
             console.log(setValue);
             

@@ -1,7 +1,7 @@
-import IconLink from "https://deno.land/x/tabler_icons_tsx@0.0.5/tsx/link.tsx";
+import IconLink from "tabler_icons/link.tsx";
 
-import IconBrandGithub from "https://deno.land/x/tabler_icons_tsx@0.0.5/tsx/brand-github.tsx";
-import IconBrandX from "https://deno.land/x/tabler_icons_tsx@0.0.5/tsx/brand-x.tsx";
+import IconBrandGithub from "tabler_icons/brand-github.tsx";
+import IconBrandX from "tabler_icons/brand-x.tsx";
 
 interface Prop {
 	name: string;
@@ -10,13 +10,13 @@ interface Prop {
 
 const IconMap = [
 	{
-		"href": "https://github.com/",
-		"element": IconBrandGithub,
+		href: "https://github.com/",
+		element: IconBrandGithub,
 	},
 	{
-		"href": "https://x.com",
-		"element": IconBrandX,
-	},
+		href: "https://x.com",
+		element: IconBrandX,
+	}
 ];
 
 export default function ExternalLink({ href, name }: Prop) {

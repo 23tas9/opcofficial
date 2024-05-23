@@ -44,16 +44,22 @@ h3 {
 main {
     width: var.$breakpoint--pc-min;
     margin: 16px auto;
+	padding: 16px;
 }
 
 .external-link {
     display: inline-flex;
-    align-items: center;
+	vertical-align: bottom;
 
     & svg {
         width: 24px;
         height: 24px;
     }
+}
+
+.google-form-embed {
+	width: 100%;
+	height: 1064px;
 }
 
 .official-icon {

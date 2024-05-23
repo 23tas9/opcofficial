@@ -66,10 +66,14 @@ export default function Home({ data }: PageProps<Data>) {
 				</article>
 			</div>
 			<div>
-				<h2>お知らせ</h2>
-				<p>
-					ここにお知らせが表示
-				</p>
+				<h2>サークル公式X</h2>
+				<a
+					class="twitter-timeline"
+					data-height="600"
+					href="https://twitter.com/oecuprogramming?ref_src=twsrc%5Etfw"
+				>
+				OECUプログラミングサークルさんのポスト
+				</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 			</div>
 		</main>
 	);

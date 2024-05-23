@@ -157,7 +157,7 @@ export default function Home() {
 							href="https://x.com/oecuprogramming"
 							name="公式X(旧Twitter)"
 						/>のDM、<br />
-						または代表や幹部のX(旧Twitter)のDMなどまでご連絡ください！
+						または、<a href="/contact">Contact</a>までご連絡ください！
 					</p>
 				</div>
 			),

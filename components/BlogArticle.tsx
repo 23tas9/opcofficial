@@ -1,5 +1,5 @@
 import { Head } from "$fresh/runtime.ts";
-import { render, CSS } from "https://deno.land/x/gfm@0.6.0/mod.ts";
+import { render, CSS } from "@deno/gfm";
 
 // syntax highlight from https://unpkg.com/browse/prismjs@1.29.0/components/
 

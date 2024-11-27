@@ -1,4 +1,4 @@
-const TopicPrefix = "# ";
+const TopicPrefix = "## ";
 
 const matchReg = new RegExp("(?<=---)[\\s\\S]*?(?=---)");
 const replaceReg = new RegExp("---[\\s\\S]*?---");

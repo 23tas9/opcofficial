@@ -12,10 +12,12 @@ export function Header() {
 			text: "Activity",
 			href: "/activity",
 		},
+		/*
 		{
 			text: "Blog",
 			href: "/blog",
 		},
+		*/
 		{
 			text: "Contact",
 			href: "/contact",
